@@ -1,114 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MC7 Web Gallery</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --text: #f9f9f9;
-      --gold: #ffd700;
-      --hover: #111111;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid var(--gold);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .tagline {
-      font-size: 1rem;
-      opacity: 0.75;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      flex-grow: 1;
-    }
-
-    .gallery-item {
-      background: #1a1a1a;
-      padding: 1rem;
-      border-radius: 12px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 10px var(--gold);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-    }
-
-    .caption {
-      text-align: center;
-      font-weight: bold;
-      color: var(--gold);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      border-top: 1px solid var(--gold);
-      font-size: 0.8rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Gallery Name] - Home of Digital Art</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <h1>✨ MC7 DIGITAL WORKS ✨</h1>
-    <p class="tagline">Art. Code. Motion. Magic.</p>
-  </header>
 
-  <main class="gallery">
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/300x200?text=Work+1" alt="Work 1" />
-      <p class="caption">Project One</p>
-    </div>
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/300x200?text=Work+2" alt="Work 2" />
-      <p class="caption">Visual Verse</p>
-    </div>
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/300x200?text=Work+3" alt="Work 3" />
-      <p class="caption">Golden Drip</p>
-    </div>
-  </main>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>[Your Gallery Name]</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="news.html">News & Insights</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 MC7 DIGITAL WORKS. All rights reserved.</p>
-  </footer>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>Experience the Future of Art</h2>
+                <p>Immerse yourself in groundbreaking digital masterpieces from visionary artists.</p>
+                <a href="exhibitions.html" class="button primary">Explore Current Exhibitions</a>
+            </div>
+            <div class="hero-background">
+                <img src="images/hero-placeholder.jpg" alt="Featured Digital Art">
+            </div>
+        </section>
+
+        <section id="current-exhibitions-highlight" class="section-padded">
+            <div class="container">
+                <h2>Now Showing</h2>
+                <div class="exhibition-grid">
+                    <div class="exhibition-card">
+                        <img src="images/exhibit-thumb-1.jpg" alt="Exhibition Title 1">
+                        <h3><a href="exhibition-detail-1.html">The Algorithmic Canvas</a></h3>
+                        <p>Discover the beauty of generative art.</p>
+                        <a href="exhibition-detail-1.html" class="button secondary">View Exhibition</a>
+                    </div>
+                    <div class="exhibition-card">
+                        <img src="images/exhibit-thumb-2.jpg" alt="Exhibition Title 2">
+                        <h3><a href="exhibition-detail-2.html">NFT Narratives</a></h3>
+                        <p>Stories encoded on the blockchain.</p>
+                        <a href="exhibition-detail-2.html" class="button secondary">View Exhibition</a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="exhibitions.html" class="button primary">See All Exhibitions</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-artists-highlight" class="section-padded bg-light">
+            <div class="container">
+                <h2>Featured Visionaries</h2>
+                <div class="artist-grid">
+                    <div class="artist-card">
+                        <img src="images/artist-avatar-1.jpg" alt="Artist Name 1">
+                        <h3><a href="artist-detail-1.html">A.I. Maestro</a></h3>
+                        <p>Generative Art Specialist</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="images/artist-avatar-2.jpg" alt="Artist Name 2">
+                        <h3><a href="artist-detail-2.html">Pixel Prophet</a></h3>
+                        <p>Immersive 3D Environments</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="artists.html" class="button primary">Discover All Artists</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-newsletter" class="section-padded cta-banner">
+            <div class="container text-center">
+                <h2>Stay Connected with Digital Art</h2>
+                <p>Be the first to know about new exhibitions, artist drops, and virtual events.</p>
+                <form action="#" method="POST" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="button primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>[Your Gallery Name]</h3>
+                    <p>Pioneering the future of digital art.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/icon-twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="images/icon-discord.png" alt="Discord"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="exhibitions.html">Exhibitions</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="news.html">News & Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 [Your Gallery Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
-</html>
+                  </html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Gallery Name] - Home of Digital Art</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>[Your Gallery Name]</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="news.html">News & Insights</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>Experience the Future of Art</h2>
+                <p>Immerse yourself in groundbreaking digital masterpieces from visionary artists.</p>
+                <a href="exhibitions.html" class="button primary">Explore Current Exhibitions</a>
+            </div>
+            <div class="hero-background">
+                <img src="images/hero-placeholder.jpg" alt="Featured Digital Art">
+            </div>
+        </section>
+
+        <section id="current-exhibitions-highlight" class="section-padded">
+            <div class="container">
+                <h2>Now Showing</h2>
+                <div class="exhibition-grid">
+                    <div class="exhibition-card">
+                        <img src="images/exhibit-thumb-1.jpg" alt="Exhibition Title 1">
+                        <h3><a href="exhibition-detail-1.html">The Algorithmic Canvas</a></h3>
+                        <p>Discover the beauty of generative art.</p>
+                        <a href="exhibition-detail-1.html" class="button secondary">View Exhibition</a>
+                    </div>
+                    <div class="exhibition-card">
+                        <img src="images/exhibit-thumb-2.jpg" alt="Exhibition Title 2">
+                        <h3><a href="exhibition-detail-2.html">NFT Narratives</a></h3>
+                        <p>Stories encoded on the blockchain.</p>
+                        <a href="exhibition-detail-2.html" class="button secondary">View Exhibition</a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="exhibitions.html" class="button primary">See All Exhibitions</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-artists-highlight" class="section-padded bg-light">
+            <div class="container">
+                <h2>Featured Visionaries</h2>
+                <div class="artist-grid">
+                    <div class="artist-card">
+                        <img src="images/artist-avatar-1.jpg" alt="Artist Name 1">
+                        <h3><a href="artist-detail-1.html">A.I. Maestro</a></h3>
+                        <p>Generative Art Specialist</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="images/artist-avatar-2.jpg" alt="Artist Name 2">
+                        <h3><a href="artist-detail-2.html">Pixel Prophet</a></h3>
+                        <p>Immersive 3D Environments</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="artists.html" class="button primary">Discover All Artists</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-newsletter" class="section-padded cta-banner">
+            <div class="container text-center">
+                <h2>Stay Connected with Digital Art</h2>
+                <p>Be the first to know about new exhibitions, artist drops, and virtual events.</p>
+                <form action="#" method="POST" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="button primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>[Your Gallery Name]</h3>
+                    <p>Pioneering the future of digital art.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/icon-twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="images/icon-discord.png" alt="Discord"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="exhibitions.html">Exhibitions</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="news.html">News & Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 [Your Gallery Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+          </html>
